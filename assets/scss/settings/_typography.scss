@@ -1,0 +1,45 @@
+// ════════════════════════════════════════════════════════════
+// 字級工具類（Typography Utilities）
+// ════════════════════════════════════════════════════════════
+
+// ─── 標題字級（.h1 ~ .h6）──────────────────────────────────
+// 用 map 統一管理，@each 自動產生對應 class
+$heading-sizes: (
+  h1: 40px,
+  h2: 32px,
+  h3: 28px,
+  h4: 24px,
+  h5: 20px,
+  h6: 16px,
+);
+
+@each $name, $size in $heading-sizes {
+  .#{$name} {
+    font-size: $size;
+    line-height: 1.2;
+    letter-spacing: 0.05em;
+  }
+}
+
+// ─── 內文字級（.p-lg ~ .p-xs）──────────────────────────────
+$paragraph-sizes: (
+  lg: 20px,
+  md: 16px,
+  sm: 14px,
+  xs: 12px,
+);
+
+@each $name, $size in $paragraph-sizes {
+  .p-#{$name} {
+    font-size: $size;
+    letter-spacing: 0.05em;
+  }
+}
+
+// ─── Font Weight 工具類（.fw-100 ~ .fw-900）─────────────────
+// @each 自動產生 9 個 class，避免重複撰寫
+@each $w in (100, 200, 300, 400, 500, 600, 700, 800, 900) {
+  .fw-#{$w} {
+    font-weight: $w;
+  }
+}

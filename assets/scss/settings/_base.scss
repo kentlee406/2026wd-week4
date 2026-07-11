@@ -1,0 +1,46 @@
+// ════════════════════════════════════════════════════════════
+// 基礎樣式
+// ════════════════════════════════════════════════════════════
+
+// 全站預設字體與行高
+body {
+  font-family: "Noto Sans TC", sans-serif;
+  line-height: 1.5;
+}
+
+// 內容最大寬度容器，水平置中
+.container {
+  max-width: 856px;
+  margin: 0 auto;
+}
+
+// 切換為 Mina 英文裝飾字體
+.ff-Mina {
+  font-family: "Mina", sans-serif;
+}
+
+// 停用狀態：半透明且不可點擊
+.disabled {
+  opacity: 40%;
+  pointer-events: none;
+}
+
+// 全站連結預設樣式（移除底線、統一顏色）
+a {
+  display: block;
+  text-decoration: none;
+  color: $neutral-900;
+
+  // hover / active 狀態：品牌色邊框 + 品牌色文字
+  &:hover,
+  &:active {
+    border: 1px solid $primary-400;
+    color: $primary-400;
+  }
+}
+
+// 圖片預設填滿容器寬度
+img {
+  width: 100%;
+  height: auto;
+}

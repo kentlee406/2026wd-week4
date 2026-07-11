@@ -1,0 +1,80 @@
+// ════════════════════════════════════════════════════════════
+// 顏色工具類（Color Utilities）
+// ════════════════════════════════════════════════════════════
+
+// ─── 文字色：Primary + 特殊色（.cr-p* / .cr-d* / .cr-n0）──
+$text-colors: (
+  "cr-p100": $primary-100,
+  "cr-p200": $primary-200,
+  "cr-p300": $primary-300,
+  "cr-p400": $primary-400,
+  "cr-p500": $primary-500,
+  "cr-d300": #d74f4f,
+  // 警示紅，不在色票系統內
+  "cr-n0": $neutral-0,
+);
+
+@each $class, $color in $text-colors {
+  .#{$class} {
+    color: $color;
+  }
+}
+
+// ─── 文字色：Neutral（.cr-n100 ~ .cr-n900）─────────────────
+$neutral-text-colors: (
+  "cr-n100": $neutral-100,
+  "cr-n200": $neutral-200,
+  "cr-n300": $neutral-300,
+  "cr-n400": $neutral-400,
+  "cr-n500": $neutral-500,
+  "cr-n600": $neutral-600,
+  "cr-n700": $neutral-700,
+  "cr-n800": $neutral-800,
+  "cr-n900": $neutral-900,
+);
+
+@each $class, $color in $neutral-text-colors {
+  .#{$class} {
+    color: $color;
+  }
+}
+
+// ─── 背景色：Primary（.bg-p100 ~ .bg-p500）──────────────────
+$primary-bg-colors: (
+  "bg-p100": $primary-100,
+  "bg-p200": $primary-200,
+  "bg-p300": $primary-300,
+  "bg-p400": $primary-400,
+  "bg-p500": $primary-500,
+);
+
+@each $class, $color in $primary-bg-colors {
+  .#{$class} {
+    background-color: $color;
+  }
+}
+
+// ─── 背景色：Neutral（.bg-n0 ~ .bg-n900）────────────────────
+$neutral-bg-colors: (
+  "bg-n0": $neutral-0,
+  "bg-n100": $neutral-100,
+  "bg-n200": $neutral-200,
+  "bg-n300": $neutral-300,
+  "bg-n400": $neutral-400,
+  "bg-n500": $neutral-500,
+  "bg-n600": $neutral-600,
+  "bg-n700": $neutral-700,
+  "bg-n800": $neutral-800,
+  "bg-n900": $neutral-900,
+);
+
+@each $class, $color in $neutral-bg-colors {
+  .#{$class} {
+    background-color: $color;
+  }
+}
+
+// 設計稿特定背景色，不在色票系統內
+.bg-f1f3f7 {
+  background-color: #f1f3f7;
+}

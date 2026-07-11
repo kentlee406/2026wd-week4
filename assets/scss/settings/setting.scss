@@ -1,0 +1,12 @@
+// ════════════════════════════════════════════════════════════
+// Settings 入口檔
+// 依載入順序匯入各 partial，後續 partial 皆可使用 _variables 中的變數
+// ════════════════════════════════════════════════════════════
+
+@import "variables"; // SCSS 變數 + CSS 自訂屬性（:root）
+@import "base"; // 基礎元素樣式（body、a、img…）
+@import "typography"; // 字級、字重工具類
+@import "utilities"; // 通用工具類
+@import "colors"; // 文字色、背景色工具類
+@import "spacing"; // 間距工具類
+@import "flex"; // Flex 工具類

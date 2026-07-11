@@ -1,0 +1,66 @@
+// ════════════════════════════════════════════════════════════
+// SCSS 變數定義
+// 所有色票與間距集中於此，修改設計 Token 時只需改這裡
+// ════════════════════════════════════════════════════════════
+
+// ─── Primary 色票（品牌綠）──────────────────────────────────
+// 數字越小越淺，越大越深
+$primary-100: #f5fee7; // 極淺背景
+$primary-200: #e8fece; // 淺背景
+$primary-300: #c0fa73; // 強調色
+$primary-400: #57a203; // 主要互動色（按鈕、連結）
+$primary-500: #477a11; // hover / 深色變體
+
+// ─── Neutral 色票（灰階）────────────────────────────────────
+$neutral-0: #ffffff; // 純白
+$neutral-100: #f8f9fa; // 頁面背景
+$neutral-200: #e9ecef; // 卡片背景
+$neutral-300: #dee2e6; // 分隔線
+$neutral-400: #ced4da; // 停用邊框
+$neutral-500: #adb5bd; // placeholder 文字
+$neutral-600: #6c757d; // 次要文字
+$neutral-700: #495057; // 輔助文字
+$neutral-800: #343a40; // 標題文字
+$neutral-900: #212529; // 主要文字（近黑）
+
+// ─── 間距系統 ────────────────────────────────────────────────
+// key 為數值（px），用於產生 --spaceN CSS 自訂屬性
+$spaces: (
+  4: 4px,
+  8: 8px,
+  12: 12px,
+  16: 16px,
+  24: 24px,
+  32: 32px,
+  48: 48px,
+  56: 56px,
+  64: 64px,
+  80: 80px,
+);
+
+// ════════════════════════════════════════════════════════════
+// CSS 自訂屬性（Design Tokens）
+// 透過 SCSS 插值將變數橋接為 CSS var()，方便 JS 與 HTML 使用
+// ════════════════════════════════════════════════════════════
+:root {
+  --primary-100: #{$primary-100};
+  --primary-200: #{$primary-200};
+  --primary-300: #{$primary-300};
+  --primary-400: #{$primary-400};
+  --primary-500: #{$primary-500};
+  --neutral-0: #{$neutral-0};
+  --neutral-100: #{$neutral-100};
+  --neutral-200: #{$neutral-200};
+  --neutral-300: #{$neutral-300};
+  --neutral-400: #{$neutral-400};
+  --neutral-500: #{$neutral-500};
+  --neutral-600: #{$neutral-600};
+  --neutral-700: #{$neutral-700};
+  --neutral-800: #{$neutral-800};
+  --neutral-900: #{$neutral-900};
+
+  // 自動從 $spaces map 產生 --space4 ~ --space80
+  @each $key, $val in $spaces {
+    --space#{$key}: #{$val};
+  }
+}

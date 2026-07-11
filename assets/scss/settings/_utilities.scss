@@ -1,0 +1,19 @@
+// ════════════════════════════════════════════════════════════
+// 通用工具類（General Utilities）
+// ════════════════════════════════════════════════════════════
+
+.bb-1-n300 {
+  border-bottom: 1px solid $neutral-300;
+} // 底部分隔線
+.d-block {
+  display: block;
+}
+.d-flex {
+  display: flex;
+}
+.p-center {
+  text-align: center;
+}
+.text-del {
+  text-decoration: line-through;
+} // 刪除線文字

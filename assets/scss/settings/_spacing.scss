@@ -1,0 +1,84 @@
+// ════════════════════════════════════════════════════════════
+// 間距工具類（Spacing Utilities）
+// 命名規則：{屬性}-{方向}-{數值}
+//   mt / mb / ml / mr = margin 單方向
+//   pt / pb / pl / pr = padding 單方向
+//   mx / my = margin X 軸 / Y 軸
+//   px / py = padding X 軸 / Y 軸
+//   m  / p  = margin / padding 四週全包
+// ════════════════════════════════════════════════════════════
+
+// map key   = class 前綴
+// map value = 要輸出的 CSS 屬性清單（支援多個）
+$spacing-props: (
+  "mt": (
+    margin-top,
+  ),
+  "mb": (
+    margin-bottom,
+  ),
+  "ml": (
+    margin-left,
+  ),
+  "mr": (
+    margin-right,
+  ),
+  "pt": (
+    padding-top,
+  ),
+  "pb": (
+    padding-bottom,
+  ),
+  "pl": (
+    padding-left,
+  ),
+  "pr": (
+    padding-right,
+  ),
+  "mx": (
+    margin-left,
+    margin-right,
+  ),
+  "my": (
+    margin-top,
+    margin-bottom,
+  ),
+  "px": (
+    padding-left,
+    padding-right,
+  ),
+  "py": (
+    padding-top,
+    padding-bottom,
+  ),
+  "m": (
+    margin,
+  ),
+  "p": (
+    padding,
+  ),
+);
+
+// 雙層 @each：外層逐一走訪 $spaces，內層產生各方向 class
+@each $size-key, $size-val in $spaces {
+  @each $prefix, $props in $spacing-props {
+    .#{$prefix}-#{$size-key} {
+      @each $prop in $props {
+        #{$prop}: $size-val;
+      }
+    }
+  }
+}
+
+// ─── 特殊值（非間距系統標準值）──────────────────────────────
+.py-9point5 {
+  // 與某元件對齊用，非系統標準值
+  padding-top: 9.5px;
+  padding-bottom: 9.5px;
+}
+
+.py-151 {
+  // 配合首頁 Hero 區塊的上下留白
+  padding-top: 151px;
+  padding-bottom: 151px;
+}

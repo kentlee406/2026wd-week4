@@ -1,0 +1,142 @@
+// ════════════════════════════════════════════════════════════
+// Flex 工具類（Flex Utilities）
+// 命名規則：對應 Emmet CSS 縮寫（移除冒號）
+//   df    = display: flex          dif   = display: inline-flex
+//   flxd  = flex-direction         fxw   = flex-wrap
+//   jc    = justify-content        ai    = align-items
+//   ac    = align-content          as    = align-self
+//   fxg   = flex-grow              fxsh  = flex-shrink
+//   fx    = flex（快捷）
+// ════════════════════════════════════════════════════════════
+
+// ─── display ─────────────────────────────────────────────────
+.df {
+  display: flex;
+}
+.dif {
+  display: inline-flex;
+}
+
+// ─── flex-direction ──────────────────────────────────────────
+// r = row | rr = row-reverse | c = column | cr = column-reverse
+$flex-directions: (
+  "r": row,
+  "rr": row-reverse,
+  "c": column,
+  "cr": column-reverse,
+);
+
+@each $suffix, $val in $flex-directions {
+  .flxd#{$suffix} {
+    flex-direction: $val;
+  }
+}
+
+// ─── flex-wrap ───────────────────────────────────────────────
+// n = nowrap | w = wrap | wr = wrap-reverse
+$flex-wraps: (
+  "n": nowrap,
+  "w": wrap,
+  "wr": wrap-reverse,
+);
+
+@each $suffix, $val in $flex-wraps {
+  .fxw#{$suffix} {
+    flex-wrap: $val;
+  }
+}
+
+// ─── justify-content ─────────────────────────────────────────
+// fs = flex-start | fe = flex-end | c = center
+// sb = space-between | sa = space-around | se = space-evenly
+$justify-contents: (
+  "fs": flex-start,
+  "fe": flex-end,
+  "c": center,
+  "sb": space-between,
+  "sa": space-around,
+  "se": space-evenly,
+);
+
+@each $suffix, $val in $justify-contents {
+  .jc#{$suffix} {
+    justify-content: $val;
+  }
+}
+
+// ─── align-items ─────────────────────────────────────────────
+// fs = flex-start | fe = flex-end | c = center | s = stretch | b = baseline
+$align-items-map: (
+  "fs": flex-start,
+  "fe": flex-end,
+  "c": center,
+  "s": stretch,
+  "b": baseline,
+);
+
+@each $suffix, $val in $align-items-map {
+  .ai#{$suffix} {
+    align-items: $val;
+  }
+}
+
+// ─── align-content ───────────────────────────────────────────
+// fs = flex-start | fe = flex-end | c = center
+// sb = space-between | sa = space-around | s = stretch
+$align-contents: (
+  "fs": flex-start,
+  "fe": flex-end,
+  "c": center,
+  "sb": space-between,
+  "sa": space-around,
+  "s": stretch,
+);
+
+@each $suffix, $val in $align-contents {
+  .ac#{$suffix} {
+    align-content: $val;
+  }
+}
+
+// ─── align-self ──────────────────────────────────────────────
+// a = auto | fs = flex-start | fe = flex-end
+// c = center | s = stretch | b = baseline
+$align-selfs: (
+  "a": auto,
+  "fs": flex-start,
+  "fe": flex-end,
+  "c": center,
+  "s": stretch,
+  "b": baseline,
+);
+
+@each $suffix, $val in $align-selfs {
+  .as#{$suffix} {
+    align-self: $val;
+  }
+}
+
+// ─── flex-grow / flex-shrink ─────────────────────────────────
+.fxg0 {
+  flex-grow: 0;
+} // 不放大
+.fxg1 {
+  flex-grow: 1;
+} // 填滿剩餘空間
+.fxsh0 {
+  flex-shrink: 0;
+} // 不縮小（固定寬度常用）
+.fxsh1 {
+  flex-shrink: 1;
+} // 允許縮小（預設行為）
+
+// ─── flex 快捷 ───────────────────────────────────────────────
+.fx1 {
+  flex: 1;
+} // 等比填滿，等同 flex: 1 1 0
+.fxa {
+  flex: auto;
+} // 依內容大小，可伸縮
+.fxn {
+  flex: none;
+} // 固定大小，不伸縮
