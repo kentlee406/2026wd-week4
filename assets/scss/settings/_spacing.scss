@@ -82,3 +82,12 @@ $spacing-props: (
   padding-top: 151px;
   padding-bottom: 151px;
 }
+
+.mx-312 {
+  margin-left: 312px;
+  margin-right: 312px;
+}
+
+.bt-1-n300 {
+  border-top: 1px solid $neutral-300; // 上部分隔線
+}

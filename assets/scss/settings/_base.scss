@@ -39,6 +39,13 @@ a {
   }
 }
 
+button {
+  border: none;
+  &:hover {
+    background-color: $neutral-500;
+  }
+}
+
 // 圖片預設填滿容器寬度
 img {
   width: 100%;
