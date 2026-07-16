@@ -1,3 +1,194 @@
-.product-title {
-  font-size: 64px;
+.product-images {
+  max-width: 746px;
+  // 兩欄、gap: 8px
+  @include make-grid(2, 8, 8);
+}
+.color-option {
+  width: var(--spacing-64);
+  margin-right: 8px;
+}
+.size-buttons {
+  display: flex;
+  gap: 8px;
+  width: 526px;
+  flex-wrap: wrap;
+}
+.size-button-active {
+  width: 160px;
+  height: 48px;
+  border-radius: 4px;
+  border: 1px solid var(--neutral-900);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.size-button {
+  width: 160px;
+  height: 48px;
+  border-radius: 4px;
+  border: 1px solid var(--neutral-300);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.size-button:hover {
+  background-color: var(--neutral-100);
+}
+.buttons-collect-try-on {
+  display: flex;
+}
+.buttons-collect-try-on button {
+  width: calc((100% - 8px) / 2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid var(--neutral-900);
+}
+.btn-collect {
+  background-color: var(--neutral-0);
+  color: var(--neutral-900);
+}
+.btn-try-on {
+  background-color: var(--neutral-900);
+  color: var(--neutral-0);
+}
+.btn-collect:hover {
+  background-color: var(--neutral-900);
+  color: var(--neutral-0);
+}
+.btn-try-on:hover {
+  background-color: var(--neutral-0);
+  color: var(--neutral-900);
+}
+.bi-heart,
+.bi-handbag {
+  margin-right: 2px;
+}
+
+.product-accordion {
+  border-top: 1px solid var(--neutral-300);
+}
+/* 手風琴樣式 */
+.accordion-item {
+  border-bottom: 1px solid var(--neutral-300);
+}
+
+.accordion-trigger {
+  width: 100%;
+  min-height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  border: none;
+  background-color: transparent;
+  color: var(--neutral-900);
+  padding: 16px 4px;
+  cursor: pointer;
+  text-align: left;
+}
+
+.accordion-trigger:hover {
+  color: var(--neutral-600);
+}
+
+.accordion-panel {
+  padding: 0 4px 16px;
+}
+
+.accordion-panel[hidden] {
+  display: none;
+}
+
+.accordion-panel-inner {
+  color: var(--neutral-600);
+  display: grid;
+  gap: 8px;
+  padding: 0;
+}
+
+.best-seller-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+.best-seller-card {
+  width: calc((100% - (24px * 3)) / 4);
+}
+
+.header {
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  background-image: url("../images/hero.png");
+  background-size: cover;
+}
+
+.brand-intro {
+  max-width: 1076px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.brand-history-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.brand-history-list li {
+  display: flex;
+}
+
+.brand-history-year {
+  padding-right: 8px;
+  border-right: 1px solid #212529;
+  margin-right: 8px;
+}
+.brand-concept-list {
+  list-style: none;
+  padding-left: 0;
+}
+.brand-concept-list li {
+  position: relative;
+  padding-left: 12px;
+  padding-bottom: 12px;
+}
+.brand-concept-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 1px;
+  color: gray;
+  height: 18px;
+  border-left: 3px solid #dee2e6;
+}
+
+.brand-story-list {
+  list-style: none;
+  padding-left: 0;
+}
+.brand-story-list li {
+  position: relative;
+  padding-left: 24px;
+  padding-bottom: 8px;
+}
+.brand-story-list li::before {
+  content: "↗";
+  position: absolute;
+  left: 0;
+  top: 1px;
+  color: #57a203;
+}
+.brand-story-list a {
+  color: #57a203;
+}
+.brand-story-list a:hover {
+  color: blue;
+}
+
+footer {
+  padding: 64px 0;
+  text-align: center;
 }

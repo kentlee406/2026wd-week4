@@ -1,0 +1,15 @@
+// 1. 建立一個安全檢查的函數，如果使用者輸入純數字，自動補上 px
+@function to-px($value) {
+  @if type-of($value) == 'number' and unitless($value) {
+    @return #{$value}px;
+  }
+  @return $value;
+}
+
+// 2. 建立主要驅動網格的 mixin 函數
+@mixin make-grid($cols: 1, $row-gap: 0, $col-gap: 0) {
+  display: grid;
+  grid-template-columns: repeat($cols, 1fr);
+  row-gap: to-px($row-gap);
+  column-gap: to-px($col-gap);
+}

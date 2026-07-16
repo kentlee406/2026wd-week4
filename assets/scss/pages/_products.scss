@@ -1,3 +1,58 @@
-.products-title {
-  font-size: 64px;
+.product-content {
+  display: grid;
+  grid-template-columns: 196px 1076px;
+  gap: 24px;
 }
+
+.product-cards {
+  @include make-grid(3, 48px, 24px);
+}
+
+.product-card img {
+  margin-bottom: 12px;
+}
+.product-card h3 {
+  font-weight: 700;
+  margin-bottom: 4px;
+  color: var(--neutral-900);
+}
+/* 分頁樣式 */
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 48px;
+}
+.page-btn {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--neutral-900);
+  border: 1px solid transparent;
+  transition: background-color 0.2s ease;
+}
+.page-btn:hover,
+.page-btn:active {
+  background-color: var(--neutral-100);
+  color: var(--neutral-900);
+  border-color: transparent;
+}
+.page-btn.is-current,
+.page-btn.is-current:hover {
+  background-color: var(--primary-300);
+  color: var(--neutral-900);
+}
+.page-arrow {
+  color: var(--neutral-600);
+  font-size: 32px;
+  line-height: 1;
+}
+.page-ellipsis {
+  width: 40px;
+  text-align: center;
+  color: var(--neutral-900);
+}
+/* 分頁樣式結束 */

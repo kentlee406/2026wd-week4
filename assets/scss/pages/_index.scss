@@ -1,3 +1,88 @@
-.index-title {
-  font-size: 100px;
+.hero {
+  background-image: url("../images/banner.png");
+  background-size: cover;
+  padding-left: 200px;
+  padding-top: 289px;
+  padding-bottom: 288px;
+}
+.index-products {
+  // 兩欄、row-gap 40px、column-gap 24px
+  @include make-grid(2, 40, 24);
+}
+.best-seller-products {
+  // 四欄、row-gap 0px、column-gap 24px
+  @include make-grid(4, 0, 24);
+  .product {
+    position: relative;
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+      z-index: 1;
+    }
+    .hito {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 2;
+    }
+  }
+}
+.index-sales {
+  background-image: url("../images/banner-co-branded.png");
+  background-size: cover;
+  .content {
+    margin-top: 100px;
+    margin-bottom: 100px;
+  }
+}
+.index-series {
+  // 四欄、row-gap 0px、column-gap 24px
+  @include make-grid(4, 0, 24);
+  .index-series-item {
+    position: relative;
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+      z-index: 1;
+    }
+    .textbox {
+      position: absolute;
+      inset: 0; // 讓絕對定位元素貼齊父層四邊
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.4);
+      color: #fff;
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}
+.index-inspirations {
+  // 6欄、row-gap 8px、column-gap 8px
+  @include make-grid(6, 8, 8);
+}
+.inspiration-bigger {
+  grid-column-end: span 2;
+  grid-row-end: span 2;
+}
+/* logo 需依設計稿加上綠色小圓點 */
+.brand-logo {
+  position: relative;
+  z-index: 1;
+}
+.brand-logo:after {
+  content: "";
+  position: absolute;
+  top: 11px;
+  right: 11px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--primary-300);
+  z-index: -1;
 }

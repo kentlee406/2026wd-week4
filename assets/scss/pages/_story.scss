@@ -1,3 +1,76 @@
-.story-title {
-  font-size: 64px;
+.header {
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  background-image: url("../images/hero.png");
+  background-size: cover;
+}
+
+.brand-intro {
+  max-width: 1076px;
+  margin: 0 auto;
+}
+
+.brand-history-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.brand-history-list li {
+  display: flex;
+}
+
+.brand-history-year {
+  padding-right: 8px;
+  border-right: 1px solid #212529;
+  margin-right: 8px;
+}
+.brand-concept-list {
+  list-style: none;
+  padding-left: 0;
+}
+.brand-concept-list li {
+  position: relative;
+  padding-left: 12px;
+  padding-bottom: 12px;
+}
+.brand-concept-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 1px;
+  color: gray;
+  height: 18px;
+  border-left: 3px solid #dee2e6;
+}
+
+.brand-story-list {
+  list-style: none;
+  padding-left: 0;
+}
+.brand-story-list li {
+  position: relative;
+  padding-left: 24px;
+  padding-bottom: 8px;
+}
+.brand-story-list li::before {
+  content: "↗";
+  position: absolute;
+  left: 0;
+  top: 1px;
+  color: #57a203;
+}
+.brand-story-list a {
+  color: #57a203;
+}
+.brand-story-list a:hover {
+  color: blue;
+}
+
+footer {
+  padding: 64px 0;
+  text-align: center;
 }

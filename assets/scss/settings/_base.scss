@@ -31,10 +31,11 @@ a {
   text-decoration: none;
   color: $neutral-900;
 
-  // hover / active 狀態：品牌色邊框 + 品牌色文字
+  // hover / active 狀態：改用中性背景，不使用框線
   &:hover,
   &:active {
-    border: 1px solid $primary-400;
+    border: none;
+    background-color: $neutral-200;
     color: $primary-400;
   }
 }
@@ -42,7 +43,7 @@ a {
 button {
   border: none;
   &:hover {
-    background-color: $neutral-500;
+    background-color: $neutral-200;
   }
 }
 

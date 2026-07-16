@@ -2,11 +2,99 @@
 <html lang="zh-TW">
   <head>
     <%- include('./head/head'); -%>
-    <title>products</title>
+    <title>URBNSTEP | 產品列表</title>
   </head>
   <body>
     <%- include('./layout/header'); -%>
-    <h1 class="products-title">我是products</h1>
+    <section class="product-list">
+      <div class="container-1296">
+        <div class="mt-32 mb-24 p-md fw-500">
+          <span class="cr-n600 mr-12">首頁</span>
+          <span class="cr-n300 mr-12">/</span>
+          <span class="cr-n900">所有商品</span>
+        </div>
+        <h2 class="h3 my-24 py-7 fw-700 d-block cr-n900">女鞋</h2>
+        <div class="product-content">
+          <aside class="pr-24">
+            <ul>
+              <li>
+                <a href="#" class="cr-p400 fw-500 py-12 mb-16">所有商品</a>
+              </li>
+              <li><a href="#" class="cr-n900 fw-500 py-12 mb-16">慢跑鞋</a></li>
+              <li><a href="#" class="cr-n900 fw-500 py-12 mb-16">滑板鞋</a></li>
+              <li><a href="#" class="cr-n900 fw-500 py-12 mb-16">厚底鞋</a></li>
+              <li>
+                <a href="#" class="cr-n900 fw-500 py-12 mb-16">
+                  限定 / 聯名企劃
+                </a>
+              </li>
+            </ul>
+          </aside>
+          <main>
+            <ul class="product-cards mb-48">
+              <li class="product-card">
+                <img src="../assets/images/product.png" alt="PLATFORM 404" />
+                <h3 class="h6"><a href="product.html">PLATFORM 404</a></h3>
+                <p class="p-md">NT$2,600</p>
+              </li>
+              <li class="product-card">
+                <img src="../assets/images/product-1.png" alt="PLATFORM 404" />
+                <h3 class="h6"><a href="product.html">PLATFORM 404</a></h3>
+                <p class="p-md">NT$2,600</p>
+              </li>
+              <li class="product-card">
+                <img src="../assets/images/product-2.png" alt="VM001" />
+                <h3 class="h6"><a href="#">VM001</a></h3>
+                <p class="p-md">NT$2,600</p>
+              </li>
+              <li class="product-card">
+                <img src="../assets/images/product-3.png" alt="Melty Kiss" />
+                <h3 class="h6"><a href="#">Melty Kiss</a></h3>
+                <p class="p-md">NT$4,000</p>
+              </li>
+              <li class="product-card">
+                <img src="../assets/images/product-4.png" alt="BOOMBLOK" />
+                <h3 class="h6"><a href="#">BOOMBLOK</a></h3>
+                <p class="p-md">NT$3,200</p>
+              </li>
+              <li class="product-card">
+                <img src="../assets/images/product-5.png" alt="BOOMBLOK" />
+                <h3 class="h6"><a href="#">BOOMBLOK</a></h3>
+                <p class="p-md">NT$3,200</p>
+              </li>
+              <li class="product-card">
+                <img src="../assets/images/product-6.png" alt="R:UNER" />
+                <h3 class="h6"><a href="#">R:UNER</a></h3>
+                <p class="p-md">NT$4,000</p>
+              </li>
+              <li class="product-card">
+                <img src="../assets/images/product-7.png" alt="Sugar Snap" />
+                <h3 class="h6"><a href="#">Sugar Snap</a></h3>
+                <p class="p-md">NT$4,000</p>
+              </li>
+              <li class="product-card">
+                <img src="../assets/images/product-8.png" alt="Neofoam" />
+                <h3 class="h6"><a href="#">Neofoam</a></h3>
+                <p class="p-md">NT$4,000</p>
+              </li>
+            </ul>
+            <nav class="pagination" aria-label="商品分頁">
+              <a href="#" class="page-btn page-arrow" aria-label="上一頁"
+                >&lsaquo;</a
+              >
+              <a href="#" class="page-btn is-current" aria-current="page">1</a>
+              <a href="#" class="page-btn">2</a>
+              <a href="#" class="page-btn">3</a>
+              <span class="page-ellipsis" aria-hidden="true">...</span>
+              <a href="#" class="page-btn">10</a>
+              <a href="#" class="page-btn page-arrow" aria-label="下一頁"
+                >&rsaquo;</a
+              >
+            </nav>
+          </main>
+        </div>
+      </div>
+    </section>
     <%- include('./layout/footer'); -%>
 
     <script type="module" src="../main.js"></script>

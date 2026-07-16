@@ -5,6 +5,8 @@
 // ─── 標題字級（.h1 ~ .h6）──────────────────────────────────
 // 用 map 統一管理，@each 自動產生對應 class
 $heading-sizes: (
+  display-1: 64px,
+  display-2: 48px,
   h1: 40px,
   h2: 32px,
   h3: 28px,

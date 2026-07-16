@@ -88,6 +88,33 @@ $spacing-props: (
   margin-right: 312px;
 }
 
+.container-1296 {
+  max-width: 1296px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.container-768 {
+  max-width: 768px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.container-856 {
+  max-width: 856px;
+  margin-left: auto;
+  margin-right: auto;
+}
 .bt-1-n300 {
   border-top: 1px solid $neutral-300; // 上部分隔線
+}
+
+.py-5 {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.my-5 {
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
