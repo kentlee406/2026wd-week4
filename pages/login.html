@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="zh-TW">
+  <head>
+    <%- include('./head/head'); -%>
+    <title>URBNSTEP | 登入</title>
+  </head>
+  <body>
+    <%- include('./layout/header'); -%>
+    <section class="login-section">
+      <img src="../assets/images/login.png" alt="登入圖片" />
+      <div class="login">
+        <h1 class="mt-120 p-center h3 fw-700 cr-n900">歡迎</h1>
+        <div class="my-32 mx-80">
+          <!-- 1. 上方頁籤 (Tabs) -->
+          <div class="tab-header df">
+            <button class="tab-btn active" data-target="login-content">
+              登入
+            </button>
+            <button class="tab-btn" data-target="register-content">註冊</button>
+          </div>
+
+          <!-- 2. 下方內容區塊 -->
+          <div class="mt-32">
+            <!-- 登入面板 -->
+            <div class="tab-panel active" id="login-content">
+              <div class="social-list">
+                <!-- Facebook -->
+                <button class="btn-social">
+                  <img src="../assets/images/facebook.svg" alt="Facebook" />
+                  <span>Facebook 登入</span>
+                </button>
+
+                <!-- Apple -->
+                <button class="btn-social">
+                  <img src="../assets/images/apple.svg" alt="Apple" />
+                  <span>Apple 登入</span>
+                </button>
+
+                <!-- Google -->
+                <button class="btn-social">
+                  <img src="../assets/images/google.svg" alt="Google" />
+                  <span>Google 登入</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- 註冊面板 -->
+            <div class="tab-panel" id="register-content">
+              <div class="social-list">
+                <!-- Facebook -->
+                <button class="btn-social">
+                  <img src="../assets/images/facebook.svg" alt="Facebook" />
+                  <span>Facebook 登入</span>
+                </button>
+
+                <!-- Apple -->
+                <button class="btn-social">
+                  <img src="../assets/images/apple.svg" alt="Apple" />
+                  <span>Apple 登入</span>
+                </button>
+
+                <!-- Google -->
+                <button class="btn-social">
+                  <img src="../assets/images/google.svg" alt="Google" />
+                  <span>Google 登入</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <%- include('./layout/footer'); -%>
+
+    <script type="module" src="../main.js"></script>
+  </body>
+</html>

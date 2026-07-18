@@ -1,0 +1,74 @@
+.login-section {
+  @extend .container-1296;
+  @extend .py-64;
+  display: grid;
+  grid-template-columns: 1fr 746px;
+  gap: 24px;
+  border-radius: 12px;
+}
+.login {
+  background-image: url("../assets/images/login-bg.png");
+  border-radius: 12px;
+}
+/* --- 上方 Tabs 樣式 --- */
+.tab-header {
+  border-bottom: 1px solid #e0e0e0; /* 底部的細灰線 */
+}
+
+.tab-btn {
+  flex: 1; /* 讓兩個按鈕平分寬度 */
+  background: none;
+  border: none;
+  outline: none;
+  @extend .py-12;
+  @extend .h6;
+  @extend .fw-700;
+  cursor: pointer;
+  border-bottom: 2px solid transparent; /* 預留底線位置防止震動 */
+  transition: all 0.2s ease;
+}
+
+.tab-btn.active {
+  color: $neutral-900;
+  border-bottom: 2px solid $neutral-900; /* 圖片中的粗黑底線 */
+}
+
+.tab-panel {
+  display: none; /* 預設全部隱藏 */
+}
+
+.tab-panel.active {
+  display: block; /* 只有加上 active 的才顯示 */
+}
+
+/* --- 第三方登入按鈕 --- */
+.social-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px; /* 按鈕之間的間距 */
+}
+
+.btn-social {
+  width: 100%;
+  background-color: #ffffff;
+  border: 1px solid $neutral-300; /* 淡淡的框線 */
+  border-radius: 4px; /* 微圓角 */
+  @extend .p-12, .df, .aic, .jcfs;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02); /* 淡淡的陰影 */
+  transition:
+    background-color 0.2s,
+    box-shadow 0.2s;
+}
+
+/* 按鈕內部的圖標與文字 */
+.btn-social img {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+  margin-right: 12px; /* 圖標與文字的間距 */
+}
+
+.btn-social span {
+  @extend .p-md, .cr-n900;
+}

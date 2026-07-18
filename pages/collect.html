@@ -6,7 +6,91 @@
   </head>
   <body>
     <%- include('./layout/header'); -%>
-    <h1 class="collect-title">我是collect</h1>
+    <section class="container-636 my-64">
+      <h2 class="p-center h3 cr-n900 fw-700 df aic jcc mb-32">
+        <svg
+          width="40"
+          height="40"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          class="mr-16"
+        >
+          <!-- 淺綠色圓形背景 -->
+          <circle cx="12" cy="12" r="10" fill="#C1F8A0" />
+          <!-- 深綠色打勾線條 -->
+          <path
+            d="M8 12L11 15L16 9"
+            stroke="#2E691A"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          /></svg
+        >我的收藏
+      </h2>
+      <div class="bg-p100 pl-16 py-16 mb-32">
+        <p class="p-md cr-p400 d-inline">
+          <i
+            class="bi bi-truck mr-12"
+            style="font-size: 24px; line-height: 24px"
+          ></i>
+          門市營業時間：<br class="rwd-br" />
+          週一至週五 10:00 - 22:00
+        </p>
+      </div>
+      <div class="collect-list">
+        <div class="collect-item py-32 bb-1-n300">
+          <img src="../assets/images/product.png" alt="Platform 404" />
+          <div class="collect-item-text">
+            <h3 class="h5 fw-700 cr-n900 mb-8">Platform 404</h3>
+            <p class="p-md mb-8">
+              <span class="cr-n600 mr-12">尺寸</span>
+              <span class="cr-n900">38</span>
+            </p>
+            <p class="p-md mb-8">
+              <span class="cr-n600 mr-12">顏色</span>
+              <span class="cr-n900">Navy</span>
+            </p>
+            <p class="h6 fw-700 cr-n900 p-right">NT$2,600</p>
+          </div>
+        </div>
+        <div class="collect-item py-32  bb-1-n300">
+          <img src="../assets/images/product-4.png" alt="BOOMLOK" />
+          <div class="collect-item-text"><h3 class="h5 fw-700 cr-n900 mb-8">BOOMLOK</h3>
+            <p class="p-md mb-8">
+            <span class="cr-n600 mr-12">尺寸</span>
+            <span class="cr-n900">38</span>
+          </p>
+          <p class="p-md mb-8">
+            <span class="cr-n600 mr-12">顏色</span>
+            <span class="cr-n900">White</span>
+          </p>
+          <p class="h6 fw-700 cr-n900 p-right">NT$3,200</p></div>
+            
+          </div>
+        </div>
+        <div class="collect-item py-32  bb-1-n300">
+          <img src="../assets/images/product-4.png" alt="MELTY KISS" />
+          <div class="collect-item-text">
+            <h3 class="h5 fw-700 cr-n900 mb-8">MELTY KISS</h3>
+            <p class="p-md mb-8">
+              <span class="cr-n600 mr-12">尺寸</span>
+              <span class="cr-n900">38</span>
+            </p>
+            <p class="p-md mb-8">
+              <span class="cr-n600 mr-12">顏色</span>
+              <span class="cr-n900">Violet</span>
+            </p>
+            <p class="h6 fw-700 cr-n900 p-right">NT$4,000</p>
+          </div>
+          
+        </div>
+        <button type="button" class="btn-try-on p-md mt-32 px-24 py-12 m0-auto d-block">
+          立即預約門市試穿
+        </button>
+      </div>
+
+    </section>
     <%- include('./layout/footer'); -%>
 
     <script type="module" src="../main.js"></script>

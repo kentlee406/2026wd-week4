@@ -5,6 +5,10 @@
 .bb-1-n300 {
   border-bottom: 1px solid $neutral-300;
 } // 底部分隔線
+.m0-auto{
+  margin-left: auto;
+  margin-right: auto;
+}
 .d-block {
   display: block;
 }
@@ -13,6 +17,9 @@
 }
 .p-center {
   text-align: center;
+}
+.p-right {
+  text-align: right;
 }
 .text-del {
   text-decoration: line-through;

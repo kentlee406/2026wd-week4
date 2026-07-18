@@ -1,3 +1,29 @@
-.collect-title {
-  font-size: 64px;
+.collection-check {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  font-size: 16.5px;
+  @extend .cr-p500, .bg-p100, .fw-700, .df, .jcc, .aic, .p-center;
+}
+
+/* 預設行動版：顯示換行 */
+.rwd-br {
+  display: inline;
+}
+.collect-item {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  gap: 16px;
+}
+.collect-item-image {
+  width: 120px;
+  height: 120px;
+}
+
+/* 桌面版（可依需求調整斷點，如 768px 或 992px） */
+@media (min-width: 768px) {
+  .rwd-br {
+    display: none; /* 隱藏換行標籤，文字就會連在一起 */
+  }
 }
