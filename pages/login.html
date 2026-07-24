@@ -7,7 +7,18 @@
   <body>
     <%- include('./layout/header'); -%>
     <section class="login-section">
-      <img src="../assets/images/login.png" alt="登入圖片" />
+      <picture class="login-picture">
+        <!-- 當螢幕寬度小於或等於 576px 時，載入小圖 -->
+        <source
+          media="(max-width: 576px)"
+          srcset="../assets/images/login-sm.png"
+        />
+        <!-- 當螢幕寬度大於 576px 時（預設），載入大圖 -->
+        <source srcset="../assets/images/login.png" />
+
+        <!-- 後備機制（Fallback）：實際渲染出來的標籤，樣式必須綁在它身上 -->
+        <img src="../assets/images/login.png" alt="登入圖片" />
+      </picture>
       <div class="login">
         <h1 class="mt-120 p-center h3 fw-700 cr-n900">歡迎</h1>
         <div class="my-32 mx-80">

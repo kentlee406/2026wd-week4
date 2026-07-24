@@ -92,24 +92,45 @@ $spacing-props: (
   max-width: 1296px;
   margin-left: auto;
   margin-right: auto;
+  @media (max-width: $breakpoints) {
+    max-width: 100%;
+    margin-left: 12px;
+    margin-right: 12px;
+  }
 }
 
 .container-768 {
   max-width: 768px;
   margin-left: auto;
   margin-right: auto;
+  @media (max-width: $breakpoints) {
+    max-width: 100%;
+    margin-left: 12px;
+    margin-right: 12px;
+  }
 }
 
 .container-856 {
   max-width: 856px;
   margin-left: auto;
   margin-right: auto;
+  @media (max-width: $breakpoints) {
+    max-width: 100%;
+    margin-left: 12px;
+    margin-right: 12px;
+  }
 }
 .container-636 {
   max-width: 636px;
   margin-left: auto;
   margin-right: auto;
+  @media (max-width: $breakpoints) {
+    max-width: 100%;
+    margin-left: 12px;
+    margin-right: 12px;
+  }
 }
+
 .bt-1-n300 {
   border-top: 1px solid $neutral-300; // 上部分隔線
 }
@@ -122,4 +143,35 @@ $spacing-props: (
 .my-5 {
   margin-top: 5px;
   margin-bottom: 5px;
+}
+
+@media (max-width: $breakpoints) {
+  .my-sm-40 {
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+  .mb-sm-24 {
+    margin-bottom: 24px;
+  }
+  .sm-h2 {
+    font-size: 32px;
+  }
+  .sm-h4 {
+    font-size: 24px;
+  }
+  .sm-h6 {
+    font-size: 16px;
+  }
+  .mt-sm-16 {
+    margin-top: 16px;
+  }
+  .sm-mb-12 {
+    margin-bottom: 12px;
+  }
+  .mb-sm-8 {
+    margin-bottom: 8px;
+  }
+  .mb-sm-0 {
+    margin-bottom: 0;
+  }
 }

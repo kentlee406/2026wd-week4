@@ -1,1 +1,98 @@
-// (original file was empty)
+/* ==========================================================================
+   桌機版預設樣式 (維持你原本的設定，並補上客製化微調)
+   ========================================================================== */
+
+/* Logo 樣式與小綠點 */
+.logo {
+  @extend .py-8, .px-12;
+  position: relative;
+  z-index: 1;
+  letter-spacing: 0.044rem;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 11px;
+    right: 11px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: var(--primary-300);
+    z-index: -1;
+  }
+}
+.bi-person::before {
+  height: 24px;
+  width: 24px;
+}
+
+/* ==========================================================================
+   手機版樣式 (螢幕寬度 767px 以下)
+   ========================================================================== */
+@media (max-width: $breakpoints) {
+  header.container-1296 {
+    /* 1. 覆寫桌機版的 Flex，改用 Grid 做出上下兩列 */
+    display: grid !important;
+    grid-template-areas:
+      "logo-area user-area"
+      "menu-area menu-area";
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)) 1fr 1fr;
+    align-items: center;
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: 0;
+    margin-right: 0;
+
+    /* 2. 解除包裹 Logo 與 Nav 的那層工具類 div 的 Flex 限制 */
+    > div.df.aic {
+      display: contents; /* 讓子元素直接參與外層 header 的 grid 排版 */
+    }
+
+    /* 3. 分配各個元素到 Grid 區塊 */
+    a[href="index.html"] {
+      grid-area: logo-area;
+      margin-right: 0 !important; /* 取消桌機版的 mr-48 */
+      padding-left: 4px;
+    }
+
+    a[href="login.html"] {
+      grid-area: user-area;
+      padding-right: 4px;
+    }
+
+    nav {
+      grid-area: menu-area;
+      width: 100%;
+
+      /* 4. 修改選單：滿版、平分 50% 並加上背景色 */
+      ul.df.aic {
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        list-style: none;
+
+        li {
+          flex: 1; /* 讓「產品列表」與「品牌故事」各佔 50% 寬度 */
+          text-align: center;
+
+          a {
+            display: block;
+            width: 100%;
+            margin-right: 0 !important; /* 取消桌機版的 mr-40 */
+            padding: 12px 0 !important; /* 統一手機版上下高度 */
+            text-decoration: none;
+
+
+            background-color: var(--primary-100);
+            color: var(--neutral-900);
+
+            
+            &.active {
+              background-color: var(--primary-200);
+            }
+          }
+        }
+      }
+    }
+  }
+}

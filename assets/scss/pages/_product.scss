@@ -1,68 +1,116 @@
 .product-images {
   max-width: 746px;
-  // 兩欄、gap: 8px
+  // 兩欄、gap: 8px //
   @include make-grid(2, 8, 8);
+  @media (max-width: $breakpoints) {
+    width: 0;
+    margin-right: 0 !important;
+  }
 }
-.color-option {
-  width: var(--spacing-64);
-  margin-right: 8px;
-}
-.size-buttons {
-  display: flex;
-  gap: 8px;
-  width: 526px;
-  flex-wrap: wrap;
-}
-.size-button-active {
-  width: 160px;
-  height: 48px;
-  border-radius: 4px;
-  border: 1px solid var(--neutral-900);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.size-button {
-  width: 160px;
-  height: 48px;
-  border-radius: 4px;
-  border: 1px solid var(--neutral-300);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.size-button:hover {
-  background-color: var(--neutral-100);
-}
-.buttons-collect-try-on {
-  display: flex;
-}
-.buttons-collect-try-on button {
-  width: calc((100% - 8px) / 2);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border: 1px solid var(--neutral-900);
-}
-.btn-collect {
-  background-color: var(--neutral-0);
-  color: var(--neutral-900);
-}
-.btn-try-on {
-  background-color: var(--neutral-900);
-  color: var(--neutral-0);
-}
-.btn-collect:hover {
-  background-color: var(--neutral-900);
-  color: var(--neutral-0);
-}
-.btn-try-on:hover {
-  background-color: var(--neutral-0);
-  color: var(--neutral-900);
-}
-.bi-heart,
-.bi-handbag {
-  margin-right: 2px;
+.product-text {
+  .product-image {
+    display: none;
+  }
+  .color-option {
+    width: var(--spacing-64);
+    margin-right: 8px;
+  }
+  .size-buttons {
+    display: flex;
+    gap: 8px;
+    width: 526px;
+    flex-wrap: wrap;
+  }
+  .size-button-active {
+    width: 160px;
+    height: 48px;
+    border: 1px solid var(--neutral-900);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .size-button {
+    width: 160px;
+    height: 48px;
+    border: 1px solid var(--neutral-300);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .size-button:hover {
+    background-color: var(--neutral-100);
+  }
+  .buttons-collect-try-on {
+    display: flex;
+  }
+  .buttons-collect-try-on button {
+    width: calc((100% - 8px) / 2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid var(--neutral-900);
+  }
+  .btn-collect {
+    background-color: var(--neutral-0);
+    color: var(--neutral-900);
+  }
+  .btn-try-on {
+    background-color: var(--neutral-900);
+    color: var(--neutral-0);
+  }
+  .btn-collect:hover {
+    background-color: var(--neutral-900);
+    color: var(--neutral-0);
+  }
+  .btn-try-on:hover {
+    background-color: var(--neutral-0);
+    color: var(--neutral-900);
+  }
+  .bi-heart,
+  .bi-handbag {
+    margin-right: 2px;
+  }
+  @media (max-width: $breakpoints) {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    width: 100%;
+    .product-image {
+      display: block;
+      max-width: calc(100% - 24px);
+      height: auto;
+    }
+    .size-buttons {
+      max-width: calc(100vw - 24px);
+      margin-top: 12px;
+      margin-bottom: 12px;
+      margin-left: 0;
+      margin-right: 0;
+      @include make-grid(2, 8, 8);
+      .size-button,
+      .size-button-active {
+        max-width: 160px;
+        width: calc(100% - 8px - 12px);
+      }
+    }
+    .buttons-collect-try-on {
+      flex-direction: row-reverse;
+    }
+    .btn-collect {
+      width: 48px !important;
+    }
+    .btn-try-on {
+      width: calc(100% - 48px - 8px) !important;
+    }
+    .d-sm-none {
+      display: none;
+    }
+    .mr-sm-8 {
+      margin-right: 8px;
+    }
+    .mr-sm-0 {
+      margin-right: 0;
+    }
+  }
 }
 
 .product-accordion {
@@ -107,12 +155,24 @@
 }
 
 .best-seller-cards {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 24px;
+  @include make-grid(4, 0, 24);
+  @media (max-width: $breakpoints) {
+    overflow-x: auto;
+    width: 100%; /* 設定寬度，讓圖片可以水平滑動 */
+    scroll-snap-type: x mandatory;
+  }
 }
 .best-seller-card {
-  width: calc((100% - (24px * 3)) / 4);
+  // width: calc((100% - (24px * 3)) / 4);
+  @media (max-width: $breakpoints) {
+    width: 300px;
+    height: 300px;
+    object-fit: cover; /* 圖片等比例裁剪填滿 */
+    scroll-snap-align: center; /* 核心：滑動停止時，圖片自動對齊置中 */
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
 }
 
 .header {

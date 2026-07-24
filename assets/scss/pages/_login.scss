@@ -4,11 +4,30 @@
   display: grid;
   grid-template-columns: 1fr 746px;
   gap: 24px;
-  border-radius: 12px;
+  img {
+    border-radius: 12px;
+  }
+
+  @media (max-width: $breakpoints) {
+    grid-template-columns: 1fr; /* 單欄布局 */
+    gap: 0; /* 減少間距 */
+    margin: 0; /* 移除外邊距 */
+    padding: 0; /* 移除內邊距 */
+    img {
+      border-radius: 0; /* 移除圖片圓角 */
+    }
+  }
 }
-.login {
-  background-image: url("../assets/images/login-bg.png");
-  border-radius: 12px;
+.login-picture {
+  display: block; /* 讓 picture 容器轉為區塊元素 */
+  width: 100%;
+  border-radius: 0; /* 確保容器本身沒有圓角 */
+}
+
+.login-picture img {
+  display: block; /* 消除圖片底部的微小空白間隙 */
+  width: 100%; /* 讓圖片寬度完整撐滿 */
+  border-radius: 0 !important; /* 強制將圖片本身的圓角設為直角 */
 }
 /* --- 上方 Tabs 樣式 --- */
 .tab-header {
@@ -52,7 +71,6 @@
   width: 100%;
   background-color: #ffffff;
   border: 1px solid $neutral-300; /* 淡淡的框線 */
-  border-radius: 4px; /* 微圓角 */
   @extend .p-12, .df, .aic, .jcfs;
   cursor: pointer;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02); /* 淡淡的陰影 */

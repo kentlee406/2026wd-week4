@@ -4,10 +4,21 @@
   padding-left: 200px;
   padding-top: 289px;
   padding-bottom: 288px;
+  @media (max-width: $breakpoints) {
+    background-image: url("../images/banner-sm.png");
+    padding-left: 24px;
+    padding-right: 24px;
+    padding-top: 155px;
+    padding-bottom: 155px;
+  }
 }
 .index-products {
   // 兩欄、row-gap 40px、column-gap 24px
   @include make-grid(2, 40, 24);
+  @media (max-width: $breakpoints) {
+    // 兩欄、row-gap 24px、column-gap 12px
+    @include make-grid(2, 24, 12);
+  }
 }
 .best-seller-products {
   // 四欄、row-gap 0px、column-gap 24px
@@ -27,13 +38,90 @@
       z-index: 2;
     }
   }
+  @media (max-width: $breakpoints) {
+    gap: 16px;
+    overflow-x: auto;
+    width: 100%;
+    scroll-snap-type: x mandatory;
+    .product {
+      img {
+        width: 300px;
+        height: 300px;
+        object-fit: cover; /* 圖片等比例裁剪填滿 */
+        scroll-snap-align: center; /* 核心：滑動停止時，圖片自動對齊置中 */
+      }
+      &::-webkit-scrollbar {
+        display: none;
+      }
+    }
+  }
 }
+
 .index-sales {
   background-image: url("../images/banner-co-branded.png");
   background-size: cover;
   .content {
     margin-top: 100px;
     margin-bottom: 100px;
+  }
+  .title-1 {
+    @extend .display-2;
+  }
+  .title-2 {
+    @extend .h1, .cr-p300, .mx-24, .my-5;
+  }
+  .title-3 {
+    @extend .display-2;
+  }
+  .subtitle {
+    @extend .h2, .mt-16;
+  }
+  .details {
+    @extend .p-lg, .cr-n500, .fw-400, .mt-32;
+  }
+  @media (max-width: $breakpoints) {
+    background-image: url("../images/banner-co-branded-sm.png");
+    .content {
+      margin-top: 64px;
+      margin-bottom: 64px;
+      width: calc(100% - 24px);
+      text-align: center;
+    }
+    span {
+      width: 100%;
+      &::after {
+        content: "\A";
+        white-space: pre;
+      }
+    }
+    .title-1 {
+      font-size: 32px;
+    }
+    .title-2 {
+      font-size: 28px;
+      margin-top: 8px;
+      margin-bottom: 8px;
+    }
+    .title-3 {
+      font-size: 32px;
+      margin-bottom: 16px;
+    }
+    .subtitle {
+      font-size: 20px;
+      margin-bottom: 24px;
+    }
+    .details {
+      font-size: 16px;
+      margin-bottom: 32px;
+      .detail-1,
+      .detail-3 {
+        display: block;
+        text-align: center;
+      }
+      .detail-2 {
+        display: none;
+      }
+    }
   }
 }
 .index-series {
@@ -61,6 +149,15 @@
       align-items: center;
     }
   }
+  @media (max-width: $breakpoints) {
+    @include make-grid(2, 12, 12);
+    .textbox {
+      text-align: center;
+      p {
+        font-size: 16px;
+      }
+    }
+  }
 }
 .index-inspirations {
   // 6欄、row-gap 8px、column-gap 8px
@@ -70,19 +167,24 @@
   grid-column-end: span 2;
   grid-row-end: span 2;
 }
-/* logo 需依設計稿加上綠色小圓點 */
-.brand-logo {
-  position: relative;
-  z-index: 1;
-}
-.brand-logo:after {
-  content: "";
-  position: absolute;
-  top: 11px;
-  right: 11px;
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background-color: var(--primary-300);
-  z-index: -1;
+@media (max-width: $breakpoints) {
+  .index-inspirations {
+    @include make-grid(12, 0, 16);
+    overflow-x: auto;
+    width: 100%;
+    scroll-snap-type: x mandatory;
+    .index-inspiration img {
+      width: 300px;
+      height: 300px;
+      object-fit: cover; /* 圖片等比例裁剪填滿 */
+      scroll-snap-align: center; /* 核心：滑動停止時，圖片自動對齊置中 */
+    }
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+  .inspiration-bigger {
+    grid-column-end: span 1;
+    grid-row-end: span 1;
+  }
 }
