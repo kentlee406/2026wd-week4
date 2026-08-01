@@ -16,29 +16,33 @@
   rel="stylesheet"
 />
     <title>URBNSTEP | 首頁</title>
-    <script type="module" crossorigin src="/2026wd-week4/assets/main-yum8nyqV.js"></script>
-    <link rel="stylesheet" crossorigin href="/2026wd-week4/assets/main-DOhUTIjA.css">
+    <script type="module" crossorigin src="/2026wd-week4/assets/main-x9CKaeFU.js"></script>
+    <link rel="stylesheet" crossorigin href="/2026wd-week4/assets/main-DFL8IEIa.css">
   </head>
   <body>
-    <header class="df jcsb aic container-1296">
+    <header class="df jcsb aic container">
   <div class="df aic">
-    <a href="index.html" class="mr-48">
-      <h1 class="logo d-block ff-Mina fw-700 p-lg px-12 py-8 cr-n900">
-        URBNSTEP
-      </h1>
+    <!-- 將logo改為一般標題 -->
+    <a
+      href="index.html"
+      class="mr-48 logo d-block ff-Mina fw-700 p-lg px-12 py-8 cr-n900"
+    >
+      URBNSTEP
     </a>
     <nav class="df aic">
-      <ul class="df aic">
-        <li>
+      <ul class="df aic header-nav">
+        <li class="nav-item">
           <a
             href="products.html"
-            class="p-md fw-500 cr-n900 py-12 mr-40 active"
+            class="nav-link p-md fw-500 cr-n900 py-12 mr-40 active"
           >
             商品列表
           </a>
         </li>
-        <li>
-          <a href="story.html" class="p-md fw-500 cr-n900 py-12">品牌故事</a>
+        <li class="nav-item">
+          <a href="story.html" class="nav-link p-md fw-500 cr-n900 py-12"
+            >品牌故事</a
+          >
         </li>
       </ul>
     </nav>
@@ -50,9 +54,9 @@
     <section class="hero">
       <h1 class="display-1 fw-700 cr-n0 pb-16">URBNSTEP</h1>
       <p class="h3 fw-700 cr-n0 pb-48">Your Step, Your Statement</p>
-      <button type="button" class="bg-p300 p-md cr-n900 px-24 py-12 fw-500">
+      <a href="products.html" class="bg-p300 p-md cr-n900 px-24 py-12 fw-500 btn-cta">
         立即選購
-      </button>
+      </a>
     </section>
     <!-- 新品上市 -->
     <section class="container-1296 my-64 my-sm-40 cr-n900">
@@ -62,39 +66,47 @@
       <p class="h2 sm-h4 fw-700 p-center mb-32 mb-sm-24">新品上市</p>
       <ul class="index-products">
         <li>
-          <img
-            src="/2026wd-week4/assets/new-1-DFuFJpu2.png"
-            alt="Monoverse"
-            class="mb-12 mb-sm-8"
-          />
-          <h3 class="h5 sm-h6 fw-700 mb-4 mb-sm-0">Monoverse</h3>
+          <a href="product.html">
+            <img
+              src="/2026wd-week4/assets/new-1-DFuFJpu2.png"
+              alt="Monoverse"
+              class="mb-12 mb-sm-8"
+            />
+            <h3 class="h5 sm-h6 fw-700 mb-4 mb-sm-0">Monoverse</h3>
+          </a>
           <p class="p-md fw-500">NT$3,600</p>
         </li>
         <li>
-          <img
-            src="/2026wd-week4/assets/new-2-BCvgVdcV.png"
-            alt="PLATFORM 404"
-            class="mb-12 mb-sm-8"
-          />
-          <h3 class="h5 sm-h6 fw-700 mb-4 mb-sm-0">PLATFORM 404</h3>
+          <a href="product.html">
+            <img
+              src="/2026wd-week4/assets/new-2-BCvgVdcV.png"
+              alt="PLATFORM 404"
+              class="mb-12 mb-sm-8"
+            />
+            <h3 class="h5 sm-h6 fw-700 mb-4 mb-sm-0">PLATFORM 404</h3>
+          </a>
           <p class="p-md fw-500">NT$2,600</p>
         </li>
         <li>
-          <img
-            src="/2026wd-week4/assets/new-3-DlHP5xvf.png"
-            alt="URBN Force"
-            class="mb-12 mb-sm-8"
-          />
-          <h3 class="h5 sm-h6 fw-700 mb-4 mb-sm-0">URBN Force</h3>
+          <a href="product.html">
+            <img
+              src="/2026wd-week4/assets/new-3-DlHP5xvf.png"
+              alt="URBN Force"
+              class="mb-12 mb-sm-8"
+            />
+            <h3 class="h5 sm-h6 fw-700 mb-4 mb-sm-0">URBN Force</h3>
+          </a>
           <p class="p-md fw-500">NT$3,200</p>
         </li>
         <li>
-          <img
-            src="/2026wd-week4/assets/new-4-1hP52Cz7.png"
-            alt="Mode90"
-            class="mb-12 mb-sm-8"
-          />
-          <h3 class="h5 sm-h6 fw-700 mb-4 mb-sm-0">Mode90</h3>
+          <a href="product.html">
+            <img
+              src="/2026wd-week4/assets/new-4-1hP52Cz7.png"
+              alt="Mode90"
+              class="mb-12 mb-sm-8"
+            />
+            <h3 class="h5 sm-h6 fw-700 mb-4 mb-sm-0">Mode90</h3>
+          </a>
           <p class="p-md fw-500">NT$4,000</p>
         </li>
       </ul>
@@ -103,32 +115,24 @@
     <!-- 2026.07.22 Kent Checking -->
     <section class="container-1296 mt-64">
       <h2 class="h2 sm-h4 fw-700 cr-n900 py-5 mb-16">熱銷補貨</h2>
-      <div class="best-seller-products">
-        <div class="product">
-          <img src="/2026wd-week4/assets/product-3-AxvEbKOW.png" alt="熱銷產品一" />
-          <div class="hito p-sm px-12 py-8 bg-p100 cr-p400 fw-500">
-            人氣 No.1
-          </div>
-        </div>
-        <div class="product">
-          <img src="/2026wd-week4/assets/product-11-I2v_viJI.png" alt="熱銷產品二" />
-          <div class="hito p-sm px-12 py-8 bg-p100 cr-p400 fw-500">
-            人氣 No.1
-          </div>
-        </div>
-        <div class="product">
-          <img src="/2026wd-week4/assets/product-6-D5PaxBWx.png" alt="熱銷產品三" />
-          <div class="hito p-sm px-12 py-8 bg-p100 cr-p400 fw-500">
-            人氣 No.1
-          </div>
-        </div>
-        <div class="product">
-          <img src="/2026wd-week4/assets/product-9-DL5QGtW6.png" alt="熱銷產品四" />
-          <div class="hito p-sm px-12 py-8 bg-p100 cr-p400 fw-500">
-            人氣 No.1
-          </div>
-        </div>
-      </div>
+      <ul class="best-seller-products">
+          <li class="product">
+            <img src="/2026wd-week4/assets/product-3-AxvEbKOW.png" alt="熱銷產品一" loading="lazy" sizes="(max-width: 768px) 300px, (max-width: 1024px) 250px, 200px" srcset="/2026wd-week4/assets/product-3-AxvEbKOW.png 600w" />
+            <div class="hito p-sm px-12 py-8 bg-p100 cr-p400 fw-500">人氣 No.1</div>
+          </li>
+          <li class="product">
+            <img src="/2026wd-week4/assets/product-11-I2v_viJI.png" alt="熱銷產品二" loading="lazy" sizes="(max-width: 768px) 300px, (max-width: 1024px) 250px, 200px" srcset="/2026wd-week4/assets/product-11-I2v_viJI.png 600w" />
+            <div class="hito p-sm px-12 py-8 bg-p100 cr-p400 fw-500">人氣 No.1</div>
+          </li>
+          <li class="product">
+            <img src="/2026wd-week4/assets/product-6-D5PaxBWx.png" alt="熱銷產品三" loading="lazy" sizes="(max-width: 768px) 300px, (max-width: 1024px) 250px, 200px" srcset="/2026wd-week4/assets/product-6-D5PaxBWx.png 600w" />
+            <div class="hito p-sm px-12 py-8 bg-p100 cr-p400 fw-500">人氣 No.1</div>
+          </li>
+          <li class="product">
+            <img src="/2026wd-week4/assets/product-9-DL5QGtW6.png" alt="熱銷產品四" loading="lazy" sizes="(max-width: 768px) 300px, (max-width: 1024px) 250px, 200px" srcset="/2026wd-week4/assets/product-9-DL5QGtW6.png 600w" />
+            <div class="hito p-sm px-12 py-8 bg-p100 cr-p400 fw-500">人氣 No.1</div>
+          </li>
+      </ul>
     </section>
     <!-- 跨界聯名，限量發售 -->
     <section class="index-sales my-48 df jcc aic">
@@ -142,12 +146,9 @@
           <span class="detail-2">，</span>
           <span class="detail-3">街頭能量全面引爆！</span>
         </p>
-        <button
-          type="button"
-          class="bg-p300 p-md cr-n900 px-24 py-12 fw-500 mt-48"
-        >
+        <a href="products.html" class="bg-p300 p-md cr-n900 px-24 py-12 fw-500 mt-48">
           立即搶購
-        </button>
+        </a>
       </div>
     </section>
     <!-- 依系列選購 -->
@@ -226,23 +227,20 @@
         </div>
       </div>
     </section>
-    <section class="bg-p200 p-center cr-n900">
+    <!-- 馬上註冊區塊調整 -->
+<section class="bg-p200 p-center cr-n900 py-24 my-24">
   <p class="h4 sm-h5 fw-700 pr-24 cr-n900 d-inline">加入會員取得 9 折優惠</p>
-  <button
-    type="button"
-    class="py-12 px-24 my-24 cr-n0 bg-n900"
-    onClick="window.location.href='login.html'"
-  >
+  <a href="login.html" class="cr-n0 bg-n900 d-inline p-md px-24 py-12">
     馬上註冊
-  </button>
+  </a>
 </section>
 <footer>
-  <div class="container-1296">
+  <div class="container">
     <div class="df jcsb aic pt-64 mb-24 footer-list">
-      <a href="index.html" class="mr-48 mr-sm-0">
-        <h1 class="logo d-block ff-Mina fw-700 p-lg px-12 py-8 brand-logo">
+      <a href="index.html" class="mr-48 mr-sm-0" aria-label="回到首頁">
+        <div class="logo d-block ff-Mina fw-700 p-lg px-12 py-8 brand-logo" role="img" aria-label="URBNSTEP">
           URBNSTEP
-        </h1>
+        </div>
       </a>
       <nav>
         <ul class="df aic footer-nav-list">
