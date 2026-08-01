@@ -8,12 +8,12 @@
     <%- include('./layout/header'); -%>
     <section class="login-section">
       <picture class="login-picture">
-        <!-- 當螢幕寬度小於或等於 576px 時，載入小圖 -->
+        <!-- 當螢幕寬度小於或等於 768px 時，載入小圖 -->
         <source
-          media="(max-width: 576px)"
+          media="(max-width: 768px)"
           srcset="../assets/images/login-sm.png"
         />
-        <!-- 當螢幕寬度大於 576px 時（預設），載入大圖 -->
+        <!-- 當螢幕寬度大於 768px 時（預設），載入大圖 -->
         <source srcset="../assets/images/login.png" />
 
         <!-- 後備機制（Fallback）：實際渲染出來的標籤，樣式必須綁在它身上 -->

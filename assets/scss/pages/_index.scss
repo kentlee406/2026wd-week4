@@ -11,6 +11,13 @@
     padding-top: 155px;
     padding-bottom: 155px;
   }
+
+  /* Hero CTA: 不要被全域 a{display:block} 影響，限制寬度並置中 */
+  .btn-cta {
+    display: inline-block;
+    max-width: 240px;
+    text-align: center;
+  }
 }
 .index-products {
   // 兩欄、row-gap 40px、column-gap 24px
@@ -43,6 +50,7 @@
     overflow-x: auto;
     width: 100%;
     scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
     .product {
       img {
         width: 300px;
@@ -171,6 +179,7 @@
   .index-inspirations {
     @include make-grid(12, 0, 16);
     overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
     width: 100%;
     scroll-snap-type: x mandatory;
     .index-inspiration img {

@@ -2,6 +2,11 @@
 // 基礎樣式
 // ════════════════════════════════════════════════════════════
 
+// 全域盒模型：把 padding/border 算入 width
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
 // 全站預設字體與行高
 body {
   font-family: "Noto Sans TC", sans-serif;
@@ -12,6 +17,8 @@ body {
 .container {
   max-width: 856px;
   margin: 0 auto;
+  width: 100%;
+  padding: 0 12px; /* 保留左右留白，避免小螢幕內容貼邊 */
 }
 
 // 切換為 Mina 英文裝飾字體
@@ -48,8 +55,9 @@ button {
   }
 }
 
-// 圖片預設填滿容器寬度
+// 圖片預設：不要被強制放大，維持等比縮放
 img {
-  width: 100%;
+  max-width: 100%;
   height: auto;
+  display: block;
 }

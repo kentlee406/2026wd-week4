@@ -7,6 +7,26 @@
     margin-right: 0 !important;
   }
 }
+
+/* 在平板/大手機尺寸提前切成上下排版，避免中等寬度圖像過小 */
+@media (max-width: 768px) {
+  section.container-1296.df {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .product-images {
+    max-width: 100%;
+    margin-right: 0;
+    @include make-grid(1, 8, 8);
+  }
+
+  .product-text {
+    margin-left: 0 !important;
+    margin-top: 16px;
+    width: 100%;
+  }
+}
 .product-text {
   .product-image {
     display: none;
@@ -18,7 +38,8 @@
   .size-buttons {
     display: flex;
     gap: 8px;
-    width: 526px;
+    max-width: 526px;
+    width: 100%;
     flex-wrap: wrap;
   }
   .size-button-active {
@@ -79,19 +100,21 @@
       max-width: calc(100% - 24px);
       height: auto;
     }
-    .size-buttons {
-      max-width: calc(100vw - 24px);
-      margin-top: 12px;
-      margin-bottom: 12px;
-      margin-left: 0;
-      margin-right: 0;
-      @include make-grid(2, 8, 8);
-      .size-button,
-      .size-button-active {
-        max-width: 160px;
-        width: calc(100% - 8px - 12px);
+      .size-buttons {
+        max-width: calc(100% - 24px);
+        margin-top: 12px;
+        margin-bottom: 12px;
+        margin-left: 0;
+        margin-right: 0;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 8px;
+        .size-button,
+        .size-button-active {
+          width: 100%;
+          max-width: none;
+        }
       }
-    }
     .buttons-collect-try-on {
       flex-direction: row-reverse;
     }

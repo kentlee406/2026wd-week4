@@ -120,6 +120,21 @@ $spacing-props: (
     margin-right: 12px;
   }
 }
+
+/* 主要容器（語意化名稱，不綁定具體數字） */
+.container-main {
+  max-width: 856px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  padding-left: 12px;
+  padding-right: 12px;
+  @media (max-width: $breakpoints) {
+    max-width: 100%;
+    margin-left: 12px;
+    margin-right: 12px;
+  }
+}
 .container-636 {
   max-width: 636px;
   margin-left: auto;
@@ -128,6 +143,37 @@ $spacing-props: (
     max-width: 100%;
     margin-left: 12px;
     margin-right: 12px;
+  }
+}
+
+/* 共用 container 規則：在小螢幕採滿寬加左右 12px margin，
+   在 >=768px 時左右 margin 設為 312px（視覺左右間距一致）
+   並將最大寬度限制為 viewport 減去左右 margin，避免超出 */
+@media (max-width: $breakpoints) {
+  .container-1296,
+  .container-768,
+  .container-856,
+  .container-main,
+  .container-636 {
+    max-width: 100% !important;
+    margin-left: 12px !important;
+    margin-right: 12px !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+}
+
+@media (min-width: 768px) {
+  .container-1296,
+  .container-768,
+  .container-856,
+  .container-main,
+  .container-636 {
+    margin-left: 312px !important;
+    margin-right: 312px !important;
+    max-width: calc(100% - 624px) !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
   }
 }
 

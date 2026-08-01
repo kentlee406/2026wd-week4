@@ -17,6 +17,17 @@
       border-radius: 0; /* 移除圖片圓角 */
     }
   }
+
+  /* 補強 577px ~ 765px 的中間區段，提前切換為單欄以避免橫向溢位 */
+  @media (max-width: 765px) {
+    grid-template-columns: 1fr;
+    gap: 0;
+    margin: 0;
+    padding: 0;
+    img {
+      border-radius: 0;
+    }
+  }
 }
 .login-picture {
   display: block; /* 讓 picture 容器轉為區塊元素 */
