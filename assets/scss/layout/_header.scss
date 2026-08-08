@@ -32,7 +32,6 @@
 /* container 規則：小於 768px 時左右 margin 為 12px，否則為 312px
    作用於 header.container 與 footer > .container */
 @media (max-width: 767px) {
-  header.container,
   footer > .container {
     max-width: 100%;
     width: calc(100% - 24px);
@@ -41,7 +40,6 @@
     padding-left: 0;
     padding-right: 0;
   }
-
 }
 
 @media (min-width: 768px) {
@@ -56,34 +54,37 @@
 
 @media (max-width: $breakpoints) {
   /* 支援使用 .container 或 .container-1296 的 header */
-  header.container, header.container-1296 {
-    /* 1. 覆寫桌機版的 Flex，改用 Grid 做出上下兩列 */
+  header.container,
+  header.container-1296 {
+    /* 覆寫桌機 Flex，改為手機雙列：上列 Logo/會員、下列選單 */
     display: grid !important;
     grid-template-areas:
       "logo-area user-area"
       "menu-area menu-area";
-    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)) 1fr 1fr;
+    grid-template-columns: 1fr auto;
     align-items: center;
-    padding-left: 12px;
-    padding-right: 12px;
-    margin-left: 0;
-    margin-right: 0;
+    row-gap: 12px;
+    width: 100%;
+    max-width: 100%;
+    margin: 0 !important;
+    padding: 12px 0 0;
 
-    /* 2. 解除包裹 Logo 與 Nav 的那層工具類 div 的 Flex 限制 */
+    /* 解除包裹 Logo 與 Nav 的工具類 div，讓子元素直接參與 grid */
     > div.df.aic {
-      display: contents; /* 讓子元素直接參與外層 header 的 grid 排版 */
+      display: contents;
     }
 
-    /* 3. 分配各個元素到 Grid 區塊 */
     a[href="index.html"] {
       grid-area: logo-area;
-      margin-right: 0 !important; /* 取消桌機版的 mr-48 */
-      padding-left: 4px;
+      margin-right: 0 !important;
+      padding-left: 12px;
     }
 
     a[href="login.html"] {
       grid-area: user-area;
-      padding-right: 4px;
+      justify-self: end;
+      margin-right: 0 !important;
+      padding-right: 12px;
     }
 
     nav {
@@ -91,8 +92,7 @@
       width: 100%;
     }
 
-    /* 扁平化的 header nav 樣式（避免過深巢狀） */
-    .header-nav {
+    nav ul {
       width: 100%;
       padding: 0;
       margin: 0;
@@ -100,12 +100,12 @@
       display: flex;
     }
 
-    .header-nav > li {
+    nav ul > li {
       flex: 1;
       text-align: center;
     }
 
-    .header-nav > li > a {
+    nav ul > li > .nav-link {
       display: block;
       width: 100%;
       margin-right: 0 !important;
@@ -115,7 +115,7 @@
       color: var(--neutral-900);
     }
 
-    .header-nav > li > a.active {
+    nav ul > li > .nav-link.active {
       background-color: var(--primary-200);
     }
   }

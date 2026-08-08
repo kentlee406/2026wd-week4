@@ -1,8 +1,8 @@
 .login-section {
-  @extend .container-1296;
+  @extend .container;
   @extend .py-64;
   display: grid;
-  grid-template-columns: 1fr 746px;
+  grid-template-columns: repeat(2, 1fr);
   gap: 24px;
   img {
     border-radius: 12px;
